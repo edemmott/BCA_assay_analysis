@@ -12,14 +12,14 @@ The functions assume that your data is arranged on the plate according to the st
 
 For a file labelled: BCAresults.csv, the function should be done called:
 
-data = BCA_PE('BCAresults.csv','Conc',1,'Vol',50,'Dil',5,'LB',5,'Force','False')
+data = BCA_PE ( 'BCAresults.csv' , 'Conc' , 1 , 'Vol' , 50 , 'Dil' , 5 , 'LB' , 5 , 'Force' , 'False' )
 
 The only required parameter is the filename. The others are:
 * 'Conc' : desired sample concentration in microgram/mL. Default is 1.
 * 'Vol' : desired sample volume in microlitres. Default is 50.
 * 'Dil' : dilution of your sample used for the assay. Default assumes 1 in 5 dilution.
 * 'LB' : Laemelli loading buffer concentration. Is your loading buffer 5x, 6x etc. Default is 5x.
-* 'Force' : If a sample is too low concentration, force the function to give list the required amount of sample even if this means going over volume. Default is false which has the function instead scale the achievable maximum concentration down for your samples.
+* 'Force' : If a sample is too low concentration, force the function to give list the required amount of sample even if this means going over volume. Default is false which has the function instead scale the achievable maximum concentration down for your samples. Options True/False.
 
 The minimal call would be:
 BCA_PE('BCAresults.csv')
