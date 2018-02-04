@@ -83,7 +83,7 @@ for i = 1:p.Results.samples
     results{i,1} = strcat('Sample_',num2str(i)); 
     % predicts concentration and adjusts for sample dilution
     results{i,2} = round(predict(bcaFit,meanResult) * p.Results.dil,2); 
-    % if/else works through the rows and columns of the 96 well plate with increasing sample number.
+    % if/else works through the rows and columns of the 96 well plate.
     if rowNum == 8
         colNum = colNum + 2;
         rowNum = 1;
@@ -109,13 +109,11 @@ for i = 1:p.Results.samples
         % TODO: ADD ERROR HANDLING LOOP HERE FOR IF TOTAL IS -ve.
 end
 
+
+
 results.Properties.VariableNames = {'Sample_name','Conc_in_mg_per_mL','Loading_buffer_in_uL',strcat('Sample_uL_for_',num2str(p.Results.conc),'mg_mL'),strcat('Lysis_buffer_to_',num2str(p.Results.vol), '_uL')};
 
 %% Rename your samples
-
-
-%% Plot and generate pdf of results
-
 
 end
 
