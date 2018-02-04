@@ -8,7 +8,7 @@ Input data can be in txt/csv format.
 
 The functions assume that your data is arranged on the plate according to the standard layout below, and using the same concentrations of BSA standard.
 
-![alt text](Capture.PNG "Default plate layout, (Capture.PNG)")
+![alt text](/images/Capture.PNG "Default plate layout, (/images/Capture.PNG)")
 
 For a file labelled: BCAresults.csv, the function should be done called:
 
@@ -26,6 +26,15 @@ bca_PE('BCAresults.csv' , 5
 )
 This would assume all the defaults given above.
 
-The function has three optional outputs (results, data, linfit) which provide the analysed sample table, the background normalised input data, and the curve fit model respectively. Irrespective of whether these outputs are used the function automatically generates a .pdf file (filename_stdcurve.pdf) containing the standard curve/r squared calculations as well as a .csv file containing the analysed results (filename_analysed.csv).
+The function has three optional outputs (results, data, linfit) which provide the analysed sample table, the background normalised input data, and the curve fit model respectively. Irrespective of whether these outputs are used the function automatically generates a .pdf file (filename_scurve.pdf) containing the standard curve/r squared calculations as well as a .csv file containing the analysed results (filename_analysed.csv).
 
 Note that the script assumes that you want the concentration to be as close to the desired concentration as possible. If the sample concentrations (or a single sample conc) are too low to support this, it will pop up a warning and give you the sample and dilution volumes for the maximum achievable concentration.
+
+The expected output files should look like:
+
+The standard curve .pdf:
+![alt text](/images/scurve.tiff "Default plate layout, (/images/scurve.tiff)")
+
+The analysed samples .csv:
+![alt text](/images/output.tiff "Default plate layout, (/images/output.tiff)")
+
