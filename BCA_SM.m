@@ -1,4 +1,7 @@
 %% bca_SM script for looking at BCA results from a spectramax i3 multimode plate reader.
+
+% Written by Ed Emmott, Northeastern University, Boston MA, 2018.
+
 % Note this script is designed to work only on assay results generated
 % using the standard plate format.
 
@@ -17,7 +20,7 @@
 % BCA_PE('testdata_SM.csv',5)
 % This would assume all the defaults given above.
 
-function [results] = bca_SM(filename,samples,varargin)
+function [results,bcaFit,data] = bca_SM(filename,samples,varargin)
 % parses the various optional and required inputs
 p = inputParser;
 
@@ -44,7 +47,6 @@ parse(p,filename , samples , varargin{:})
 
 %% Import .csv
 % Modified from matlab generated import code.
-%filename = '/Users/Ed/Documents/GitHub/BCA_assay_analysis/testdata_SM.csv';
 delimiter = ',';
 startRow = 4;
 endRow = 11;
@@ -78,7 +80,7 @@ results = {};
 
 for i = 1:p.Results.samples
     % averages duplicate readings
-    meanResult = mean(data(colNum:colNum + 1, rowNum)); 
+    meanResult = mean(data( rowNum , colNum:colNum + 1 )); 
     % names samples
     results{i,1} = strcat('Sample_',num2str(i)); 
     % predicts concentration and adjusts for sample dilution
@@ -109,13 +111,41 @@ for i = 1:p.Results.samples
         % TODO: ADD ERROR HANDLING LOOP HERE FOR IF TOTAL IS -ve.
 end
 
-results.Properties.VariableNames = {'Sample_name','Conc_in_mg_per_mL','Loading_buffer_in_uL',strcat('Sample_uL_for_',num2str(p.Results.conc),'mg_mL'),strcat('Lysis_buffer_to_',num2str(p.Results.vol), '_uL')};
+results.Properties.VariableNames = {'Sample_name','Conc_in_mg_per_mL','uL_LB','uL_sample','uL_Lysis_buff'};
 
 %% Rename your samples
 
 
 %% Plot and generate pdf of results
+%%
+% generate short figure name
+if contains(p.Results.filename,'/') == 1;
+    indx = strfind(p.Results.filename, '/');
+    sfilename = extractAfter(p.Results.filename,indx(numel(indx)));
+    sfilename = extractBefore(sfilename,'.csv');
+else
+    sfilename = extractBefore(p.Results.filename,'.csv');
+end
 
+f1 = figure
+%ax1 = subplot (1,2,1)
+
+plot(bcaFit)
+title ( strcat('BCA_Assay_of_',sfilename))
+xlabel ( 'Concentration in mg/mL')
+ylabel ( 'Absorbance')
+
+resultsString = evalc('disp(bcaFit.Rsquared)');
+resultsString = strrep(resultsString,'<strong>','\bf');
+resultsString = strrep(resultsString,'</strong>','\rm');
+resultsString = strrep(resultsString,'_','\_');
+FixedWidth = get(0,'FixedWidthFontName');
+annotation(gcf,'Textbox','String',resultsString,'Interpreter','Tex','FontName',FixedWidth,'FitBoxToText', 'on','Position',[0.68 0.25 0.2 0.16]); % these values 'work for me (TM)'
+
+% generate printout of plot
+saveas(gcf,strcat(sfilename,'_scurve.pdf'))
+% write .csv of table
+writetable(results,strcat(sfilename,'_analysis.csv'))
 
 end
 
