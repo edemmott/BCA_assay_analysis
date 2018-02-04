@@ -6,7 +6,9 @@ BCA_SM is the SpectraMax function.
 
 Input data can be in txt/csv format.
 
-The functions assume that your data is arranged on the plate according to the standard layout below, and using the same concentrations of BSA standard.
+NOTE: 
+* The functions assume that your data is arranged on the plate according to the standard layout below, and using the same concentrations of BSA standard.
+* The functions assume you have one plate per .csv file. multiple plates saved to the same file will be ignored.
 
 ![alt text](/images/Capture.PNG "Default plate layout, (/images/Capture.PNG)")
 
