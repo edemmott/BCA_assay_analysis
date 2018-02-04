@@ -1,8 +1,8 @@
 # BCA_assay_analysis
 Matlab functions for processing 96 well BCA assay results, prepared from either a Perkin Elmer multi-mode plate reader using the Kaleido (v1) software or a Spectramax i3 multimode plate reader.
 
-BCA_PE is the Perkin Elmer function
-BCA_SM is the SpectraMax function.
+bca_PE is the Perkin Elmer function
+bca_SM is the SpectraMax function.
 
 Input data can be in txt/csv format.
 
