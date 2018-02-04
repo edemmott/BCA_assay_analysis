@@ -1,0 +1,82 @@
+﻿Plate information
+Plate,Plate Repeat,Barcode,Chamber temperature at start,Chamber temperature at end,Ambient temperature at start,Ambient temperature at end,ScanX,ScanY,Well Repeat,Measurement date,excwavelength,emswavelength,trfwindowindex
+1,0,V_BC_1/22/2018 12:15:38 PM_Instr:1412121,,,,,,,1,,,,
+
+
+Results for ABS mono
+
+Plate: 1, PlateRepeat: 0, WellRepeat: 1
+,1,2,3,4,5,6,7,8,9,10,11,12
+A,1.9093049050937685,1.9704030018080061,0.59130312783878825,0.552166615266548,,,,,,,,
+B,1.0841976144527712,1.1114009480242988,0.8497110067378556,0.82880236182543476,,,,,,,,
+C,0.64547301506379406,0.65236008692352287,0.82952908720135243,0.84973246213918352,,,,,,,,
+D,0.33056893757180633,0.34614616955975364,0.8466952073782148,0.85004381201667278,,,,,,,,
+E,0.25853938128948467,0.24829000795214454,1.0158142566075319,0.99055917244233238,,,,,,,,
+F,0.068563483985029816,0.06675897960916502,0.94888318836627528,0.93073984013539568,,,,,,,,
+G,0.069596748440471951,0.067779090803971709,0.043319132285120812,0.043203520466502145,,,,,,,,
+H,0.06924614068750462,0.06965015752094407,0.043163304520765333,0.0428701968724642,,,,,,,,
+
+Analysis Result  
+
+Screen Basic Information
+Software version:,,1.0
+Screen Started:,,2018-01-22T12:15:38.4649042-05:00
+Screen Finished:,,2018-01-22T12:16:13.2478937-05:00
+instrument Serial Number:,,1412121
+Protocol ID:,,143
+
+Protocol Owner:,,EnSight-PC\Admin
+Protocol Name:,,BCA assay
+
+Number of plate repeats,,1
+Start plate repeat each [s],,0
+
+Plate Type
+Plate Type Name:,,96 General
+Number of rows:,,8
+Number of columns:,,12
+Plate Height [mm]:,,14.35
+Bottom Height [mm]:,,0
+Bottom thickness [mm]:,,0
+Well diameter (bottom) [mm]:,,6.5
+Well shape:,,Round
+Volume of the well [µl]:,,300
+
+Optical index:,,1.58
+Platemap
+Plate
+,1,2,3,4,5,6,7,8,9,10,11,12
+A,-,-,-,-,,,,,,,,
+B,-,-,-,-,,,,,,,,
+C,-,-,-,-,,,,,,,,
+D,-,-,-,-,,,,,,,,
+E,-,-,-,-,,,,,,,,
+F,-,-,-,-,,,,,,,,
+G,-,-,-,-,,,,,,,,
+H,-,-,-,-,,,,,,,,
+
+
+
+
+
+Operations:
+
+
+Measurements:
+
+Meas,,,,
+Tech,,,,ABS mono
+Exc. filter [nm],,,,
+Excitation wavelength [nm],,,,562
+Measurement mode,,,,Single
+Measurement height [mm],,,,7.5
+Number of flashes,,,,100
+Number of flashes integrated,,,,100
+Flash power,,,,100
+
+Analysis:
+
+
+Comments:
+TimeStamp,AuthenticationType,CreatorID,Type,ProtocolID,ProtocolVersion,ScreenID,Text,
+

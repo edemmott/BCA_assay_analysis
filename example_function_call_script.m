@@ -8,3 +8,5 @@ bca_SM('/Users/Ed/Documents/GitHub/BCA_assay_analysis/testdata_SM.csv',5)
 %% Simple call with all output options
 [results , fit , data] = bca_SM('/Users/Ed/Documents/GitHub/BCA_assay_analysis/testdata_SM.csv',5)
 
+%%
+bca_PE('/Users/Ed/Documents/GitHub/BCA_assay_analysis/testdata_PE.csv',5)
