@@ -25,6 +25,6 @@ The minimal call would be:
 bca_PE('BCAresults.csv')
 This would assume all the defaults given above.
 
-The function has three optional outputs (results, data, linfit) which provide the analysed sample table, the background normalised input data, and the curve fit model respectively. The function automatically generates a .pdf file (filename_stdcurve.pdf) containing the standard curve/r squared calculations as well as a .csv file containing the analysed results (filename_analysed.csv).
+The function has three optional outputs (results, data, linfit) which provide the analysed sample table, the background normalised input data, and the curve fit model respectively. Irrespective of whether these outputs are used the function automatically generates a .pdf file (filename_stdcurve.pdf) containing the standard curve/r squared calculations as well as a .csv file containing the analysed results (filename_analysed.csv).
 
 Note that the script assumes that you want the concentration to be as close to the desired concentration as possible. If the sample concentrations (or a single sample conc) are too low to support this, it will pop up a warning and give you the sample and dilution volumes for the maximum achievable concentration.
