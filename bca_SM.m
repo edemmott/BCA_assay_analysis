@@ -7,7 +7,7 @@
 
 % Requires: Matlab, Matlab Stats and machine learning toolbox.
 
-% data = bca_PE ( 'testdata_SM.csv' , 5 , 'auto' , 'Conc' , 1 , 'Vol' , 50 , 'Dil' , 5 , 'LB' , 5  )
+% [results, fit, data ] = bca_PE ( 'testdata_SM.csv' , 5 , 'auto' , 'Conc' , 1 , 'Vol' , 50 , 'Dil' , 5 , 'LB' , 5  )
 % 
 % The only required parameters are the filename and number of samples. The others are:
 % * 'conc' : desired sample concentration in microgram/mL. Default is 1.
