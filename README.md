@@ -9,6 +9,7 @@ Input data can be in txt/csv format.
 NOTE: 
 * The functions assume that your data is arranged on the plate according to the standard layout below, and using the same concentrations of BSA standard.
 * The functions assume you have one plate per .csv file. multiple plates saved to the same file will be ignored.
+* Force/auto functionality for scaling target protein concentration not currently implemented.
 
 ![alt text](/images/Capture.PNG "Default plate layout, (/images/Capture.PNG)")
 
