@@ -12,7 +12,7 @@ NOTE:
 
 ![alt text](/images/Capture.PNG "Default plate layout, (/images/Capture.PNG)")
 
-For a file labelled: BCAresults.csv, the function should be done called:
+For a file labelled: BCAresults.csv, the function should be called:
 
 [results, data, linfit] = bca_PE ( 'BCAresults.csv' , 5 , 'Force' , 'Conc' , 1 , 'Vol' , 50 , 'Dil' , 5 , 'LB' , 5 )
 
@@ -24,8 +24,7 @@ The only required parameters are the filename and number of samples. The others 
 * 'Force' : If a sample is too low concentration, force the function to give list the required amount of sample even if this means going over volume. Default is false which has the function instead scale the achievable maximum concentration down for your samples. Options True/False.
 
 The minimal call would be:
-bca_PE('BCAresults.csv' , 5
-)
+bca_PE('BCAresults.csv' , 5 )
 This would assume all the defaults given above.
 
 The function has three optional outputs (results, data, linfit) which provide the analysed sample table, the background normalised input data, and the curve fit model respectively. Irrespective of whether these outputs are used the function automatically generates a .pdf file (filename_scurve.pdf) containing the standard curve/r squared calculations as well as a .csv file containing the analysed results (filename_analysed.csv).
